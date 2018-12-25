@@ -3,7 +3,7 @@
 		<mt-swipe class="carousel" :auto="5000">
 	    <mt-swipe-item v-for="(item, index) in list" :key="item.value">
 	      <router-link :to="item.httpLink">
-	        <img :src="'../static/img'+ index + '.jpg'" width="100%">
+	        <img :src="'./static/img'+ index + '.jpg'" width="100%">
 	      </router-link>
 	    </mt-swipe-item>
 	  </mt-swipe>
