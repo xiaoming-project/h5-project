@@ -1,0 +1,147 @@
+@charset "utf-8";
+@import 'reset.less';
+
+html,body{
+  width: 100%;
+}
+body{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #505050;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+ul {
+  list-style-type:none;
+}
+a{
+  color: #333333;
+  text-decoration:none;
+//-webkit-tap-highlight-color:rgba(162,162,162,0.5);
+}
+input[type=number] {-moz-appearance:textfield;}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+input,button,select,textarea {
+  outline:none;
+  border: none;
+}
+textarea{
+  resize:none;
+}
+.icon {
+  display: inline-block;
+}
+.fl{float: left;}
+.fr{float: right;}
+.clear{
+  clear: both;
+}
+.clearfix:after{content:"";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*zoom:1}
+.mint-header {
+  background-color: #fff;
+  color: #222;
+  font-size: 0.32rem;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  border-bottom: 0.001rem solid #eeeeee;
+}
+.mint-tab-item-icon{
+  width:22px;
+  height:22px;
+}
+.mint-button-text {
+  font-size: 0.3rem;
+  color: #FFFFFF;
+}
+.mint-msgbox {
+    width: 60%;
+    border-radius: 0.1rem;
+    font-size: 0.32rem;
+}
+.mint-tabbar {
+    height: 1rem;
+}
+// 1px边框
+.border-bot {
+    position: relative;
+}
+.border-bot:before {
+    content: "";
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid #eee;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+}
+.border-left {
+    position: relative;
+}
+.border-left:before {
+    content: "";
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border-left: 1px solid #eee;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+}
+/* 隐藏高德地图logo */
+.amap-logo, .amap-copyright {
+  z-index: -999;
+}
+.amap-ui-misc-positionpicker {
+  display: none;
+}
+#location .mint-tab-item-label,#beyondRange .mint-tab-item-label {
+  font-size:0.3rem;
+}
+#invitationRegister{
+  .mint-cell-wrapper{
+    background:none;
+  }
+  .mint-field-core{
+    background:none;
+    color:#fa7d07;
+    font-size:0.3rem;
+    padding:0.3rem 0;
+  }
+  .mint-field-core::-webkit-input-placeholder {
+    color:#fa7d07;
+  }
+  .mint-field-core::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#fa7d07;
+  }
+  .mint-field-core:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#fa7d07;
+  }
+  .mint-field-core:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+    color:#fa7d07;
+  }
+}
+
+body {
+  padding-top: constant(safe-area-inset-top);   //为导航栏+状态栏的高度 88px
+  padding-left: constant(safe-area-inset-left);   //如果未竖屏时为0
+  padding-right: constant(safe-area-inset-right); //如果未竖屏时为0
+  padding-bottom: constant(safe-area-inset-bottom);//为底下圆弧的高度 34px
+}
